@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "dpt-unpacker"
+version = "0.1.0"
+description = "Static unpacker for dpt-shell-protected Android APKs."
+authors = ["Marcel Alexandru Nitan <nitan.marcel@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "dpt_unpacker", from = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+cryptography = ">=41.0.0"
+pyelftools = ">=0.30"
+
+[tool.poetry.scripts]
+dpt-unpack = "dpt_unpacker.cli:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
